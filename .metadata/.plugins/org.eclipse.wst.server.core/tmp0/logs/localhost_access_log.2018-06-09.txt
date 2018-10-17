@@ -1,0 +1,3 @@
+127.0.0.1 - - [09/Jun/2018:20:02:27 +0800] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [09/Jun/2018:20:02:29 +0800] "GET /AgentSystem/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [09/Jun/2018:20:02:35 +0800] "POST /AgentSystem/SelectFlightServlet HTTP/1.1" 200 774

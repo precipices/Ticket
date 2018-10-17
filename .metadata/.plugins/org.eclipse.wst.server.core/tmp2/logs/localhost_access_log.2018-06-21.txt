@@ -1,0 +1,17 @@
+127.0.0.1 - - [21/Jun/2018:16:23:07 +0800] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:23:10 +0800] "GET /MainTicketSystem/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:23:10 +0800] "GET /MainTicketSystem/js/login.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:23:11 +0800] "GET /favicon.ico HTTP/1.1" 404 1081
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:24:09 +0800] "POST /MainTicketSystem/RegisterServlet HTTP/1.1" 200 13
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:24:56 +0800] "POST /MainTicketSystem/LoginServlet HTTP/1.1" 200 15
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:25:05 +0800] "POST /MainTicketSystem/LoginServlet HTTP/1.1" 200 13
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:25:38 +0800] "GET /MainTicketSystem/mainticket.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:25:38 +0800] "GET /MainTicketSystem/css/mainticket.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:25:38 +0800] "GET /MainTicketSystem/js/mainticket.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:25:38 +0800] "GET /MainTicketSystem/images/%E6%8E%92%E5%BA%8F.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:25:48 +0800] "GET /MainTicketSystem/js/theme/default/font/iconfont.woff HTTP/1.1" 200 1492
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:26:00 +0800] "POST /MainTicketSystem/FlightServlet HTTP/1.1" 200 663
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:26:40 +0800] "POST /MainTicketSystem/FlightServlet HTTP/1.1" 200 2
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:26:43 +0800] "POST /MainTicketSystem/IdcardServlet HTTP/1.1" 200 55
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:27:27 +0800] "POST /MainTicketSystem/BankServlet HTTP/1.1" 200 299
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:28:51 +0800] "POST /MainTicketSystem/FlightServlet HTTP/1.1" 200 663

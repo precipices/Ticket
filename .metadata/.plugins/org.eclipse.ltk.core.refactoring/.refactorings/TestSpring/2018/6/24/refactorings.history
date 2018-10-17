@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;CDPlayerTest.java&apos; to &apos;BankSystem/src/test&apos;&#x0D;&#x0A;- Original project: &apos;TestSpring&apos;&#x0D;&#x0A;- Destination element: &apos;BankSystem/src/test&apos;&#x0D;&#x0A;- Original element: &apos;soundsystem1.CDPlayerTest.java&apos;" description="Copy compilation unit" destination="=BankSystem/src&lt;test" element1="/src&lt;soundsystem1{CDPlayerTest.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1528687988328" units="1" version="1.0"/>
+</session>

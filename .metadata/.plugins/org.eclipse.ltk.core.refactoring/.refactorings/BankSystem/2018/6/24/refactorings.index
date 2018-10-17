@@ -1,0 +1,15 @@
+1528617256467	Rename type 'FlightDao'
+1528617267300	Rename type 'FlightDaoImpl'
+1528618248291	Rename type 'TicketDao'
+1528618259592	Rename type 'TicketDaoImpl'
+1528619381780	Delete elements
+1528619556421	Delete element
+1528619562713	Delete elements
+1528619581779	Rename type 'IdcardServlet'
+1528620502138	Rename package 'com.agent.dao'
+1528620519225	Rename package 'com.agent.listener'
+1528620533017	Rename package 'com.agent.entity'
+1528620542732	Rename package 'com.mainticket.servlet'
+1528620555937	Rename package 'com.BankSystem.dao'
+1528623512106	Move 'index.css' to 'css'
+1528688037718	Rename type 'CDPlayerTest'

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>XX银行</title>
+<link href="css/index.css" type="text/css" rel="stylesheet"/>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="js/laydate.js"></script>
+<script src="js/index.js"></script>
+</head>
+<body>
+<h1 style="margin:0 auto;text-align:center;">XX银行后台</h1>
+<div class="content_div">
+	<div class="hd">
+		<ul>
+		<li>添加账户</li><li>删除账户</li><li>查询账户</li><li id="select_bills_tab">查询账单</li>
+		</ul>
+	</div>
+	<div class="bd">
+		<div>
+				<h1>添加账户</h1>
+				<div class="input_div">
+					<form id="addAccount_form">
+						<label>身份证号:	<input type="text" name="idcard" class="inputstyle"/></label><br/>
+						<label>密　　码:	<input type="password" name="password" class="inputstyle"/></label><br/>
+						<label>姓　　名:	<input type="text" name="name" class="inputstyle" /></label><br/>
+						<label>账户余额:	<input type="text" name="balance" class="inputstyle" value=0 /></label><br/>
+						<input type="hidden" name="method" value="addAccount"/>
+					</form>
+				</div>
+				<div class="bottom_div">
+					<input id="addAccount_button" class="buttonstyle" type="button" value="提交"/>
+				</div>
+				
+		</div>
+		<div>
+				<h1>删除账户</h1>
+				<div class="input_div">
+					<form id="deleteAccount_form" action="AccountServlet" method="post">
+						<label>身份证号:	<input type="text" name="idcard" class="inputstyle"/></label><br/>
+						<input type="hidden" name="method" value="deleteAccount"/>
+					</form>
+				</div>
+				<div class="bottom_div">
+					<input id="deleteAccount_button" class="buttonstyle" type="button" value="删除"/>
+				</div>
+		</div>
+		<div>
+				<h1>查询账户</h1>
+				<div class="input_div">
+					<form id="getAccount_form" action="AccountServlet" method="post">
+						<label>身份证号:	<input type="text" name="idcard" class="inputstyle"/></label>
+						<input id="getAccount_button" class="buttonstyle2" type="button" value="查询"/><br/>
+						<input type="hidden" name="method" value="getAccount"/>
+					</form>
+				</div>
+					<table id="accounts_table" class="tablestyle">
+						<tr><th>身份证号</th><th>姓名</th><th>余额</th><th>操作</th></tr>
+					</table>
+				<div class="bottom_div">
+					<input id="getAllAccounts_button" class="buttonstyle" type="button" value="查询全部账户"/>
+				</div>
+		</div>
+		<div>
+				<h1>查询账单</h1>
+				<div class="input_div">
+					<form id="getAccountBills_form" action="AccountServlet" method="post">
+						<label>身份证号:	<input type="text" name="idcard" class="inputstyle"/></label>
+						<input id="getAccountBills_button" class="buttonstyle2" type="button" value="查询"/><br/>
+						<input type="hidden" name="method" value="getAccountBills"/>
+					</form>
+				</div>
+					<table id="bills_table" class="tablestyle">
+						<tr><th>身份证号</th><th>费用</th><th>收费方</th><th>付款时间</th></tr>
+					</table>
+				<div class="bottom_div">
+					<input id="getAllBills_button" class="buttonstyle" type="button" value="查询全部账单"/>
+				</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	jQuery(".content_div").slide({
+		trigger : "click"
+	});
+</script>
+</body>
+</html>

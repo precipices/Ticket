@@ -1,0 +1,9 @@
+127.0.0.1 - - [08/Jun/2018:23:32:02 +0800] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:23:32:04 +0800] "GET /AgentSystem/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:23:32:04 +0800] "GET /AgentSystem/js/jquery-1.9.1.min.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:23:32:04 +0800] "GET /AgentSystem/js/laydate.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:23:32:04 +0800] "GET /AgentSystem/js/jquery.SuperSlide.2.1.1.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:23:32:04 +0800] "GET /AgentSystem/js/theme/default/laydate.css?v=5.0.9 HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:23:32:04 +0800] "GET /AgentSystem/imgs/bg.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:23:33:17 +0800] "POST /AgentSystem/SelectFlightServlet HTTP/1.1" 200 774
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:23:36:26 +0800] "POST /AgentSystem/SelectFlightServlet HTTP/1.1" 200 774

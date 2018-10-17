@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.web.WebApplicationInitializer"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+<fullyQualifiedTypeName name="org.apache.catalina.core.ApplicationContext"/>
+<fullyQualifiedTypeName name="com.agent.dao.DaoConfig"/>
+<fullyQualifiedTypeName name="soundsystem.SoundSystemMarker"/>
+<fullyQualifiedTypeName name="org.junit.Rule"/>
+<fullyQualifiedTypeName name="org.springframework.test.context.ContextConfiguration"/>
+<fullyQualifiedTypeName name="com.google.gson.Gson"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="com.mainticket.dao.CustomerDao"/>
+<fullyQualifiedTypeName name="com.mainticket.dao.IdcardsDao"/>
+<fullyQualifiedTypeName name="com.alibaba.fastjson.JSONObject"/>
+<fullyQualifiedTypeName name="com.agent.dao.AccountDao"/>
+<fullyQualifiedTypeName name="com.agent.dao.BillDao"/>
+<fullyQualifiedTypeName name="javax.jws.WebMethod"/>
+<fullyQualifiedTypeName name="com.bank.dao.BillDao"/>
+<fullyQualifiedTypeName name="com.mainticket.entity.Idcard"/>
+<fullyQualifiedTypeName name="com.agent.dao.Ticket"/>
+<fullyQualifiedTypeName name="com.mainticket.entity.LocalTicket"/>
+<fullyQualifiedTypeName name="com.mainticket.dao.LocalTicketDao"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="com.agent.dao.TicketDao"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.agent.entity.Ticket"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.alibaba.fastjson.JSON"/>
+</qualifiedTypeNameHistroy>

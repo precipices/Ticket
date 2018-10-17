@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>分布式机票系统</title>
+<link rel="stylesheet" type="text/css" href="css/hzw-city-picker.css">
+<link href="css/mainticket.css" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="js/laydate.js"></script>
+<script type="text/javascript" src="js/mainticket.js"></script>
+<script type="text/javascript" src="js/city-data.js"></script>
+<script type="text/javascript" src="js/hzw-city-picker.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		jQuery("#nav").slide({ type:"menu", titCell:".nLi", targetCell:".sub",effect:"slideDown",delayTime:300,triggerTime:0,returnDefault:true});
+	});
+</script>
+</head>
+<body>
+
+		<style type="text/css">
+		/* css 重置 */
+		*{margin:0; padding:0; list-style:none; }
+/* 		body{ background:#fff; font:normal 12px/22px 宋体;  } */
+/* 		img{ border:0;  } */
+		a{ text-decoration:none; color:#333;  }
+		a:hover{ color:#1974A1;  }
+		/* 本例子css */
+		.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+		.nav{ padding:0 20px; height:34px; line-height:34px; background:#39A4DC;  position:relative; z-index:1;  custor:pointer;  }
+		.nav a{ color:#fff;  }
+		.nav .nLi{ float:left;  position:relative; display:inline;}
+		.nav .nLi h3{ float:left;  }
+		.nav .nLi h3 a{ display:block; padding:0 20px; font-size:14px; font-weight:bold;  }
+		.nav .sub{ display:none; width:100px; left:0; top:34px;  position:absolute; background:#4E4E4E;  line-height:26px; padding:5px 0;  }
+		.nav .sub li{ zoom:1; }
+		.nav .sub a{ display:block; padding:0 10px; }
+		.nav .sub a:hover{ background:#6d6d6d; color:#fff;  }
+		.nav .on h3 a{ background:#4E4E4E; color:#fff;   }
+		</style>
+
+
+		<ul id="nav" class="nav clearfix">
+			<li class="nLi">
+				<h3><a href="mainticket.html">首页</a></h3>
+			</li>
+			<li class="nLi">
+					<h3><a href="#">机票预定</a></h3>
+			</li>
+			<li class="nLi">
+			<!-- 假设当前频道为“预告片”，手动或后台程序添加titOnClassName类名（默认是'on'），相当于设置参数defaultIndex:1。若同时设置参数returnDefault:true，则鼠标移走后0.3秒返回当前频道 -->
+					<h3><a href="#" >添加乘客</a></h3>
+			</li>
+			<li class="nLi">
+					<h3><a href="#">我的机票</a></h3>
+			</li>
+			<li class="nLi">
+					<h3><a href="index.html">重新登陆</a></h3>
+					<ul class="sub">
+						<li><a href="#">重新登陆</a></li>
+						<li><a href="#">重新登陆</a></li>
+						<li><a href="#">重新登陆</a></li>
+						<li><a href="#">重新登陆</a></li>
+						<li><a href="#">重新登陆</a></li>
+						<li><a href="#">重新登陆</a></li>
+					</ul>
+			</li>
+		</ul>
+
+		<script id="jsID" type="text/javascript">
+			jQuery("#nav").slide({ 
+				type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+				titCell:".nLi", //鼠标触发对象
+				targetCell:".sub", //titCell里面包含的要显示/消失的对象
+				effect:"slideDown", //targetCell下拉效果
+				delayTime:300 , //效果时间
+				triggerTime:0, //鼠标延迟触发时间（默认150）
+				returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+			});
+		</script>
+<!-- <div class="left_div"> -->
+<!-- <ul> -->
+<!-- 	<li>机票预定</li> -->
+<!-- 	<li>添加乘客</li> -->
+<!-- 	<li>我的机票</li> -->
+<!-- </ul> -->
+<!-- </div> -->
+<div class="flight_div">
+	<div class="hd">
+			<ul>
+				<li id="select_flight_tab">选择航班>></li>
+				<li id="check_ticket_tab1">确认机票>></li>
+				<li id="select_customer_tab">选择乘客>></li>
+				<li id="online_pay_tab">在线支付>></li>
+				<li id="check_ticket_tab2">确认机票</li>
+			</ul>
+			<!-- 		<div><div class="hd_tips">查询航班</div><div class="hd_tips">购买机票</div></div> -->
+	</div>
+	<div class="bd">
+		<div id="select_flight">
+				<h1>选择航班</h1>
+				<div class="input_div">
+					<label for="beginTime_text">出发日期:	</label>
+					<input id="beginTime_text" class="inputstyle" type="text"/>
+					<label for="fromWhere_text">从:			</label>
+					<input id="fromWhere_text" class="inputstyle" type="text"/>
+					<label for="toWhere_text">到:			</label>
+					<input id="toWhere_text" class="inputstyle" type="text"/>
+					<input id="getFlights_button" class="buttonstyle" type="button" value="查询"/>
+				</div>
+				<div class="table_div">
+					<table id="select_flight_table" class="tablestyle">
+						<tr>
+							<th style="cursor: pointer;">航班号<img src="images/排序.png" style="margin-left:10px;height: 13px;"/></th>
+							<th style="cursor: pointer;">登机时间<img src="images/排序.png" style="margin-left:10px;height: 13px;"/></th>
+							<th>从</th>
+							<th>到</th>
+							<th style="cursor: pointer;">价格<img src="images/排序.png" style="margin-left:10px;height: 13px;"/></th>
+							<th>操作</th>
+						</tr>
+					</table>
+				</div>
+		</div>
+		<div>
+				<h1>确认机票</h1>
+				<div class="table_div">
+					<table id="check_ticket_table1" class="tablestyle">
+						<tr><th>航班号</th><th>登机时间</th><th>从</th><th>到</th><th>价格</th><th>余量</th></tr>
+					</table>
+				</div>
+				<div id="message_div" class="message_div"></div>
+				<div class="button_div">
+					<input id="selectCustomers_button" type="button" value="选择乘客" class="buttonstyle"/>
+				</div>
+		</div>
+		<div>
+				<h1>选择乘客</h1>
+				<div class="table_div">
+					<table id="select_customer_table" class="tablestyle">
+						<tr><th>姓名</th><th>身份证号</th><th>添加</th></tr>
+					</table>
+				</div>
+<!-- 				<div id="message_div2" class="message_div">请选择乘客</div> -->
+				<div class="button_div">
+					<input id="online_pay_button" type="button" value="立即支付" class="buttonstyle"/>
+				</div>
+		</div>
+		<div>
+				<h1>在线支付</h1>
+				<div class="table_div">
+					<table id="online_pay_table" class="tablestyle">
+						<tr><th>航班号</th><th>登机时间</th><th>从</th><th>到</th><th>价格</th><th>姓名</th><th>身份证号</th></tr>
+					</table>
+				</div>
+				<div id="price_div" class="price_div">
+					<font color="red">总价:<span id="total_price"></span></font><br/>
+					请选择支付方式:
+					<div id="selectBank_div">
+					<select>
+					<option selected>XX银行</option>
+					<option disabled>XXX银行</option>
+					<option disabled>XXXX银行</option>
+					</select>
+					</div><br/>
+					<form id="charge_form">
+						<label>账　　号:	<input type="text" name="idcard" class="inputstyle"/></label><br/>
+						<label>密　　码:	<input type="password" name="password" class="inputstyle"/></label><br/>
+						<input type="hidden" name="cost"/>
+						<input type="hidden" name="method" value="charge"/>
+					</form>
+				</div>
+				<div class="button_div">
+					<input id="charge_button" type="button" value="确认支付" class="buttonstyle"/>
+				</div>
+		</div>
+		<div>
+				<h1>确认机票</h1>
+				<div class="table_div">
+					<table id="check_ticket_table2" class="tablestyle">
+						<tr><th>航班号</th><th>登机时间</th><th>从</th><th>到</th><th>姓名</th><th>身份证号</th><th>座位号</th></tr>
+					</table>
+				</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	jQuery(".flight_div").slide({
+		trigger : "click"
+	});
+</script>
+</body>
+</html>

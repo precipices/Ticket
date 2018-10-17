@@ -1,0 +1,9 @@
+127.0.0.1 - - [21/Jun/2018:16:17:51 +0800] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:17:53 +0800] "GET /BankSystem/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:17:53 +0800] "GET /BankSystem/css/index.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:17:53 +0800] "GET /BankSystem/js/index.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:17:55 +0800] "GET /favicon.ico HTTP/1.1" 404 1081
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:18:47 +0800] "POST /BankSystem/AccountServlet HTTP/1.1" 200 13
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:20:07 +0800] "POST /BankSystem/AccountServlet HTTP/1.1" 200 335
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:20:56 +0800] "POST /BankSystem/AccountServlet HTTP/1.1" 200 13
+0:0:0:0:0:0:0:1 - - [21/Jun/2018:16:21:33 +0800] "POST /BankSystem/AccountServlet HTTP/1.1" 200 317

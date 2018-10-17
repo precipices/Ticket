@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>查询机票</title>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="js/laydate.js"></script>
+<script src="js/index.js"></script>
+<link type="text/css" rel="stylesheet" href="css/index.css"/>
+<script type="text/javascript" src="js/city-data.js"></script>
+<script type="text/javascript" src="js/hzw-city-picker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/hzw-city-picker.css">
+<script type="text/javascript">
+
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<h1 style="margin:0 auto;text-align:center;">XX机票代理商后台</h1>
+<div class="flight_div">
+	<div class="hd">
+		<ul><li>查询航班</li><li id="select_ticket_tab">查询机票</li><li>增加航班</li></ul>
+	</div>
+	<div class="bd">
+		<div id="select_flight">
+				<h1>查询航班</h1>
+<div class="button_div">
+				出发日期:	<input id="beginTime_text" class="inputstyle" type="text"/>
+				从:			<input id="fromWhere_text" class="inputstyle" type="text"/>
+				到:			<input id="toWhere_text" class="inputstyle" type="text"/>
+				<input id="getFlights_button" class="buttonstyle" type="button" value="查询"/>
+				</div>
+				<br/>
+				<div class="table_div">
+					<table id="select_flight_table" class="tablestyle" border="1">
+						<tr><th>航班号</th><th>登机时间</th><th>从</th><th>到</th><th>价格</th><th>操作</th></tr>
+					</table>
+				</div>
+				<div class="button_div">
+				<input id="getAllFlights_button" class="buttonstyle" type="button" value="查询所有航班"/>
+				</div>
+		</div>
+		<div>
+				<h1>查询机票</h1>
+					<table id="select_ticket_table" class="tablestyle" border="1">
+						<tr><th>航班号</th><th>登机时间</th><th>从</th><th>到</th><th>价格</th><th>座位号</th><th>身份证号</th><th>姓名</th></tr>
+					</table>
+		</div>
+		<div>
+				<h1>增加航班</h1>
+				
+				<div class="input_div">
+				航班　号:<input id="flight_text2" class="inputstyle" type="text" /><br/>
+				起飞时间:<input id="beginTime_text2" class="inputstyle" type="text" /><br/>
+				出发　地:<input id="fromWhere_text2" class="inputstyle" type="text" /><br/>
+				目的　地:<input id="toWhere_text2" class="inputstyle" type="text" /><br/>
+				价　　格:<input id="price_text2" class="inputstyle" type="text" /><br/>
+				座位数量:<input id="seatsNum_text2" class="inputstyle" type="text" /><br/>
+				</div>
+				<div class="button_div">
+				<input id="addFlight_button" class="buttonstyle" type="button" value="提交"/>
+				</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	jQuery(".flight_div").slide({
+		trigger : "click"
+	});
+</script>
+</body>
+</html>
